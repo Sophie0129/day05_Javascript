@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{width: 100px; height: 200px;}
+    </style>
+    <script>
+       // let img2 = document.getElementById("myImg")
+        //페이지 실행전 실행되어서 값을 못부름
+        //실행되는 코드 아래에 입력하면 불러올 수 있음
+        alert("실행111")
+        
+        onload = () =>{ //페이지가 열린다음 실행
+            alert("실행222")
+            //alert("exevte")
+            let img = document.getElementById("myImg");
+            img.addEventListener("mouseover", changeFunc01)//함수이름으로 찾아서 출력
+           // img.addEventListener("mouseout", () =>{alert("나감")})//직접출력
+            img.addEventListener("mouseout", () =>{
+                let myImg = document.getElementById("myImg");
+                let myImg02 = document.getElementById("myImg02");
+                myImg.src="test.png"
+                myImg02.src="test.png"})
+        }
+        
+        changeFunc01 = () => {
+            let myImg = document.getElementById("myImg");
+            let myImg02 = document.getElementById("myImg02");
+            myImg.src="avocado.jpeg"
+            myImg02.src="avocado.jpeg"
+        }
+        changeFunc02 = () => {
+            let myImg = document.getElementById("myImg");
+            let myImg02 = document.getElementById("myImg02");
+            myImg.src="test.png"
+            myImg02.src="test.png"
+        }
+
+    </script>
+</head>
+<body>
+    <img id="myImg" src="test.png"><br>
+    <img id="myImg02" src="test.png" onmousedown="changeFunc01()"
+                                     onmouseup="changeFunc02()"><br>
+
+    
+</body>
+</html>

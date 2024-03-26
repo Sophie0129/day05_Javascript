@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function testFunc01() {
+            let num = 95;
+            let txt = '안녕하세요';
+            return num, txt; // 제일 마지막에쓴 txt 값만 리턴됨
+        }
+        const result = testFunc01();
+        document.write(result + "<hr>");
+
+
+
+        function testFunc02() {
+            let num = 95;
+            let txt = '안녕하세요';
+            const arr = [num, txt]//대괄호로 값을 넣어 배열로 값이 들어가게 됨
+            return arr; 
+        }
+        const result2 = testFunc02();
+        document.write(result2+ "<br>");
+        document.write(result2[0] + "<br>");
+        document.write(result2[1] + "<hr>");
+
+
+
+        function testFunc03() {
+            let num = 95;
+            let txt = '안녕하세요';
+            const arr = {'num':num, txt:txt} 
+            // 중괄호는 키와 값의 형태로 함을 알 수 있다
+            return arr; 
+        }
+        const result3 = testFunc03();
+        console.log(result3)
+        document.write(result3+ "<br>");
+        document.write(result3['num']+ "<br>");
+        document.write(result3.txt+ "<br>");//대괄호와 점 둘 다 사용가능
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        sumFunc();
+        function sumFunc(){
+            const n1 = prompt('수 입력');
+            const n2 = prompt('수 입력');
+            const sum = Number(n1) + Number(n2);
+            document.write(`${n1} + ${n2} = ${sum}<br>`)
+        }
+        */
+
+        /*
+       const n1 = prompt('수 입력');
+       const n2 = prompt('수 입력');
+        sumFunc(n1, n2);
+        function sumFunc(n1, n2){ 
+            //전역변수라서 받아줄 필요가 없지만 예시로써
+            sumFunc을 호출할때도 필요없고 펑션에서도 매개변수로 넣어줄 필요가 없
+            const sum = Number(n1) + Number(n2);
+            document.write(`${n1} + ${n2} = ${sum}<br>`)
+        }
+        */
+
+       const n1 = prompt('수 입력');
+       const n2 = prompt('수 입력');
+       const sum = op(n1, n2);
+        sumFunc(n1, n2, sum);
+        function op(n1, n2){
+            const sum = Number(n1) + Number(n2);
+            return sum;
+        }
+        function sumFunc(n1, n2, sum){ 
+            document.write(`${n1} + ${n2} = ${sum}<br>`)
+        }
+
+    </script>
+</body>
+</html>

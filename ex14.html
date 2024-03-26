@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function test(x, y) {
+        return x+y;
+    }
+    document.write(test(1,2)+"<br>");
+
+
+    //익명함수 사용법
+    let sumFunc = function (x, y) {
+        return x+y;
+    }
+    document.write(sumFunc(10,20)+"<br>");
+
+
+    let sumFunc1 = (x, y) => x+y;
+    document.write(sumFunc1(100,200)+"<br>");
+    //결과적으로 계산을 하는것을 같지만 마지막이 코드가 제일 짧음
+
+    let sumFunc2 = (x, y) => {
+        let num = 100;
+        x+y;
+        return x+y+num;
+    }
+    document.write(sumFunc2(1000,2000)+"<br>");
+    //한줄로는 중괄호{}가 없어도 괜찮지만 아래로 여러줄을 쓰면 필요하고
+    //중괄호를 쓰면 return을 써야만 값이 출력된다
+
+    const result01 = () => {
+        10+20; //중괄호 사용하고 리턴 안써서 답이 도출되지 않음
+    }
+    const result02 = () => 10+20;
+    const result03 = () => (10+20);
+
+    document.write("<hr>");
+    document.write(result01()+"<br>");
+    document.write(result02()+"<br>");
+    document.write(result03()+"<br>");
+   </script> 
+</body>
+</html>

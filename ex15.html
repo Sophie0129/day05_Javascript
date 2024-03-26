@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #h3 {color: red;}
+    </style>
+</head>
+<body>
+    <script>
+        //functon clickEvent(){} 와 같다
+        const clickEvent = () => {
+            //alert("클릭");
+            const name = document.getElementById("name");//1.해당태그를 가져와
+            console.log(name);
+            /*
+            name.value = "안녕하세요";//2.값을 넣는다
+            name.style = "background: red";
+            name.style.background = "skyblue" // 보편적으로 쓰는 방법
+            */
+
+            const name1 = document.querySelector("#name2")//아이디값 클래스값을 다 가져옴
+            console.log(name1)
+            name1.value = name.value;
+            name.value = "";
+        }
+        window.onload = () => {
+           // alert("onload"); //페이지가 호출되면 자동호출된다
+           //document.getElementsByClassName("btn")
+           const btn = document.querySelector(".btn");
+           console.log(btn)
+           btn.addEventListener("dblclick", cinnerTest);
+           //첫번재 값이 이벤트호출, 두번째 값이 함수호출
+           //아래 onclick과 같은 기능
+        }
+
+        const innerTest = () => {
+            const txt = document.getElementById("text");
+            let meg = "<h3 id='h3'>내용 바꾸기</h3>"
+            //txt.innerHTML = msg; //html형식으로 추가
+            //txt.innerText = msg; //text형식으로 추가
+            //txt.appendChild(msg);
+        }
+    </script>
+
+    <input type="text" id="name" placeholder="input name"><br>
+    <input type="text" id="nam2e" placeholder="input name"><br>
+    <input type = "button" onclick="clickEvent()" value="클릭">
+    <!--on을 붙여야 한다. 안붙히고 쓰는 방법으로 위에 있음(addEventListener)-->
+
+    <input type = "button" class="btn" value="클릭">
+
+    <br>
+    <label id="text">텍스트 값</label>
+</body>
+</html>
